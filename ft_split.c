@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                       :::      ::::::::    */
-/*   ft_split.c                                         :+:      :+:    :+:   */
+/*   ft_split.c                                        :+:      :+:    :+:    */
 /*                                                   +:+ +:+         +:+      */
 /*   By: mabuuals <mabuuals@student.42amman.com>   #+#  +:+       +#+         */
 /*                                               +#+#+#+#+#+   +#+            */
 /*   Created: 2026/10/01 07:38:46 by mabuuals         #+#    #+#              */
-/*   Updated: 2026/10/04 05:10:53 by mabuuals        ###   ########.fr        */
+/*   Updated: 2026/10/06 12:36:26 by mabuuals        ###   ########.fr        */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,11 +44,12 @@ static char	*word(char *s, char const del)
 	return (ft_substr(s, 0, wordlen));
 }
 
-static void	free_all(char **arr, size_t n)
+static char	**free_all(char **arr, size_t n)
 {
 	while (n--)
 		free(arr[n]);
 	free(arr);
+	return (NULL);
 }
 
 char	**ft_split(char const *s, char c)
@@ -70,7 +71,7 @@ char	**ft_split(char const *s, char c)
 			break ;
 		*(arrstr + i) = word((char *) s, c);
 		if (!*(arrstr + i))
-			return (free_all(arrstr, i), NULL);
+			return (free_all(arrstr, i));
 		while (!(is_del(c, *s)) && *s)
 			s++;
 		i++;
