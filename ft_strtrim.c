@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                       :::      ::::::::    */
-/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*   ft_strtrim.c                                      :+:      :+:    :+:    */
 /*                                                   +:+ +:+         +:+      */
 /*   By: mabuuals <mabuuals@student.42amman.com>   #+#  +:+       +#+         */
 /*                                               +#+#+#+#+#+   +#+            */
 /*   Created: 2026/10/01 02:56:33 by mabuuals         #+#    #+#              */
-/*   Updated: 2026/10/01 06:02:36 by mabuuals         ###   ########.fr       */
+/*   Updated: 2026/10/04 05:12:45 by mabuuals        ###   ########.fr        */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,6 @@ char	*ft_strtrim(char const *s1, char const *set)
 	size_t	midend;
 	char	*trimmed;
 
-	i = 0;
 	if (!s1 || !set)
 		return (NULL);
 	midstart = strchrdi(s1, set);

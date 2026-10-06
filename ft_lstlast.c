@@ -1,27 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_lstlast.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mabuuals <mabuuals@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/09/29 03:59:26 by mabuuals          #+#    #+#             */
-/*   Updated: 2026/10/06 01:50:52 by mabuuals         ###   ########.fr       */
+/*   Created: 2026/10/06 03:25:23 by mabuuals          #+#    #+#             */
+/*   Updated: 2026/10/06 03:30:04 by mabuuals         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memchr(const void *s, int c, size_t n)
+t_list *ft_lstlast(t_list *lst)
 {
-	size_t	i;
-
-	i = 0;
-	while (i < n)
-	{
-		if (((t_byte *)s)[i] == (t_byte) c)
-			return ((void *) &((t_byte *)s)[i]);
-		i++;
-	}
-	return (NULL);
+    while (lst)
+    {
+        if (!(lst->next))
+            break;
+        lst = lst->next;
+    }
+    return (lst);
 }
