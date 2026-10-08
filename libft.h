@@ -6,14 +6,13 @@
 /*   By: mabuuals <mabuuals@student.42amman.com>   #+#  +:+       +#+         */
 /*                                               +#+#+#+#+#+   +#+            */
 /*   Created: 2026/09/27 00:42:01 by mabuuals         #+#    #+#              */
-/*   Updated: 2026/10/06 11:48:06 by mabuuals         ###   ########.fr       */
+/*   Updated: 2026/10/08 15:48:10 by mabuuals         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 # include <stddef.h>
-# include <stdint.h>
 # include <stdlib.h>
 # include <unistd.h>
 
